@@ -11,17 +11,50 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .sheet-container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
+/* Desktop */
 iframe {
     width: 100%;
     height: 100%;
-    border: none;
+    border: 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    iframe {
+        width: 135%;
+        height: 135%;
+        transform: scale(0.74);
+        transform-origin: top left;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    iframe {
+        width: 200%;
+        height: 200%;
+        transform: scale(0.50);
+        transform-origin: top left;
+    }
+}
+
+/* Kleine iPhones */
+@media (max-width: 430px) {
+    iframe {
+        width: 230%;
+        height: 230%;
+        transform: scale(0.43);
+        transform-origin: top left;
+    }
 }
 </style>
 </head>
@@ -30,7 +63,8 @@ iframe {
 
 <div class="sheet-container">
     <iframe
-        src="https://docs.google.com/spreadsheets/d/1jTaBlyus3BPbsWIze0cUuE_1VKFuJYoi25dNVn0arzg/preview?gid=1188756480">
+        src="https://docs.google.com/spreadsheets/d/1jTaBlyus3BPbsWIze0cUuE_1VKFuJYoi25dNVn0arzg/preview?gid=1188756480"
+        title="SVO Tabelle">
     </iframe>
 </div>
 
